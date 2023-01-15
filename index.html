@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Image Generator</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">     </script>
+  <script src="https://didisoftwares.ddns.net/api/stable.js">
+  </script>
+</head>
+<script>
+  function aply() {    
+    API_STABLE.createImage($('#inp').val(), onError, onProgress, onSucess);
+  }
+
+  function onError(data) {
+    $('#holder').html('Error<br>' + data+'<br>try again soon');
+  }
+
+  function onProgress(data) {
+    $('#holder').html(data);
+  }
+
+  function onSucess(data) {
+    $('#holder').html('<div id="imgclose"  onClick="closeimg();">X</div>');
+    var elem = document.createElement("img");
+    elem.style.marginBottom = '-5px';
+    elem.setAttribute("src", data);
+    $('#holder').append(elem);
+  }
+
+  function closeimg() {
+    $('#holder').html('');
+    $('#imgclose').hide();
+  }
+
+  function sta() {
+    $('#inp').show();
+    $('#button1').show();
+    $('#holder').html('');
+  }
+</script>
+
+<body>
+  <div id="buttons" style="text-align:center">
+    <input id="inp" type="text" placeHolder="Enter Your Request" style="display:none" />
+    <input id="button1" type="button" onclick="aply();" value="Create" style="display:none" /><br>
+    <div id="holder">
+      <div class="disc">
+        The generated images are unfiltered and may produce disturbing or offensive images. I am not responsible for the
+        images you produce or what you do with them. By using these images, you agree to take full responsibility for
+        the images you produce and agree that you are at least 18 years of age.<br>
+        <input type="button" onclick="sta();" value="OK" />
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
