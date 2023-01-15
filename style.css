@@ -1,0 +1,105 @@
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+    * {
+      font-family: 'Chivo', monospace;
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      color: #d7e3e5;
+    }
+
+    .item2 {
+      text-align: center;
+      margin-bottom: -15px;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+
+    .imgholder {
+      background-color: #7e7d7d;
+      width: 236px;
+      height: 170px;
+      display: flex;
+      cursor: pointer;
+      border: 2px solid black;
+      padding: 0px;
+      float: left;
+      justify-content: center;
+    }
+
+    .imgmain {
+      height: 190px;
+      text-align: center;
+      display: block;
+      width: 521px;
+      margin-left: 50%;
+      translate: -50% 0px;
+    }
+
+    .iobj {
+      max-width: 250px;
+      max-height: 180px;
+    }
+
+    #inp {
+      background-color: #3d3e46;
+      border: 1px solid gray;
+      border-radius: 5px;
+      width: 400px;
+      color: limegreen;
+    }
+
+    #button1 {
+      border-radius: 5px;
+    }
+
+    #button1:hover {
+      background-color: lime;
+    }
+
+    #holder {
+      background-color: black;
+      max-width: 97%;
+      max-height: 97%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid silver;
+      overflow: hidden;
+    }
+
+    #imgclose {
+      background-color: #c72e2e;
+      width: 23px;
+      height: 26px;
+      position: absolute;
+      padding: 0px;
+      z-index: 99;
+      cursor: pointer;
+      top: 0px;
+      right: 0px;
+    }
+
+    #imgclose:hover {
+      background-color: red;
+    }
+
+    .disc {
+      padding: 6px;
+      font-size: 18px;
+      width: 400px;
+    }
+    html,
+    body {
+      color: #d7e3e5;
+      text-shadow: #242422 1px 0 10px;
+      background-color: #282a35;
+      height: 98%;
+      width: 98%;
+    }
